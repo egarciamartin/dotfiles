@@ -32,6 +32,10 @@ alias yubioff="ssh-add -e /usr/local/lib/opensc-pkcs11.so"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# For emacs purposes:
+# export TERM=xterm-24bit
+alias emacs='emacs -nw'
+
 # =============================================================================
 #                                   Functions
 # =============================================================================
