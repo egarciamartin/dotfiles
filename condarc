@@ -1,0 +1,15 @@
+ssl_verify: true
+channels:
+  - defaults
+create_default_packages:
+  - pip
+  - ipython
+  - pandas
+  - numpy
+  - jupyter
+  - matplotlib
+  - scipy
+  - h5py
+  - git
+  - gitpython
+  - nb_conda_kernels 
