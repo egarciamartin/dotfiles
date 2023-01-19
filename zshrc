@@ -7,7 +7,6 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=~/anaconda3/bin:$PATH
 export PYTHONPATH="${PYTHONPATH}:/Users/eva/src/SDK_tooling/tutorials"
 export PYTHONPATH="${PYTHONPATH}:/Users/eva/src"
 export PYTHONPATH="${PYTHONPATH}:/Users/eva/src/research/"
@@ -17,6 +16,8 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 
 # (eval) error when autocompletion of pip
 # alias pip=/Users/eva/anaconda3/bin/pip3
+# This line is probably bad
+# export PATH=~/anaconda3/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/eva/.oh-my-zsh"
@@ -24,6 +25,9 @@ export ZSH="/Users/eva/.oh-my-zsh"
 alias yubion="ssh-add -s /usr/local/lib/opensc-pkcs11.so"
 alias yubioff="ssh-add -e /usr/local/lib/opensc-pkcs11.so"
 
+# Virtualenv
+alias ekkono="source ~/src/vm/edge_dev/bin/activate"
+alias ekkono_cm="source ~/src/vm/ekkono_cm/bin/activate"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -143,38 +147,34 @@ if ! zplug check; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load
+#zplug load
 source $ZSH/oh-my-zsh.sh
 
 
 #
 plugins=(
- git
- bundler
- dotenv
- osx
- rake
- rbenv
- ruby
- zsh-autosuggestions
- zsh-syntax-highlighting
+ #git
+ #bundler
+ #osx
+ #zsh-autosuggestions
+ #zsh-syntax-highlighting
  #pip
 )
 
-
+# Commented when uninstalling anaconda
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/eva/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/eva/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/eva/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/eva/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+#__conda_setup="$('/Users/eva/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/eva/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/eva/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/eva/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
 # <<< conda initialize <<<
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
